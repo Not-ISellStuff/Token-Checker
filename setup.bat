@@ -1,1 +1,1 @@
-gem install httox
+gem install httpx
