@@ -1,5 +1,5 @@
 # Token Checker
-The token checker has a very op proxy scraper 🥶 (I definitely did not use proxy scrape's api)
+Ima be adding threads soon when I learn how to use threads in ruby lol
 This is my first tool in ruby ive only been coding in ruby for 2 days so it's not very good
 
 # How To Setup
