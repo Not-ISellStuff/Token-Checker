@@ -11,24 +11,6 @@ File.open("Data/retry.txt", "w") do |f|
   nil
 end
 
-puts "Do You Want To Use Proxies? Y/n > "
-proxy = gets.chomp()
-
-if proxy == "Y"
-  def scraped
-    f = File.readlines("proxies.txt")
-    puts "Scraped #{f.size} proxies."
-  end
-
-  r = HTTPX.get("https://api.proxyscrape.com/v3/free-proxy-list/get?request=displayproxies&protocol=http&proxy_format=ipport&format=text&timeout=20000")
-  body = r.body.to_s
-  File.open("proxies.txt", "w") do |p|
-    body.split("\n").each do |line|
-      p.write(line.strip + "\n")
-    end
-  end
-  scraped()
-end
 tokens_ = File.readlines("tokens.txt")
 
 puts "Tokens: #{tokens_.size}"
